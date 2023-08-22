@@ -37,6 +37,23 @@ body {
   width: 50px;
 }
 
+.navbar {
+  display: flex;
+}
+
+.navbar i {
+  font-size: 35px;
+  display: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+navbar-link {
+  text-decoration: none;
+}
+
 /* ------------- HERO ------*/
 
 .hero {
@@ -446,71 +463,168 @@ body {
 
 /* ///////MENU HAMBURGUESA///// */
 
-.navbar {
-  display: flex;
-}
-
-.navbar i {
-  font-size: 35px;
-  display: none;
-}
-
-#toggle-menu {
-  display: none;
-}
-
-navbar-link {
-  text-decoration: none;
-}
-
 /* //////////RESPONSIVE////// */
 
-@media screen and (max-width: 1100px) {
-  .tarjetas,
+@media screen and (max-width: 1024px) {
+  .header {
+    width: 100%;
+  }
+
+  .hero img {
+    height: 250px;
+    width: 250px;
+    margin-top: 10px;
+  }
+
+  .hero__texto {
+    width: 100%;
+    padding: 100px 400px;
+  }
+
+  .tarjetas {
+    flex-direction: column;
+  }
   .container {
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-    height: 50px;
-    margin: 20px;
-  }
-  .card2 {
-    height: 440px;
-  }
-  .card3 {
-    height: 440px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .navbar {
-    width: 112%;
+    flex-direction: column;
   }
 
-  .about {
-    width: 110%;
+  .info-contacto {
+    padding: 1000px 1px 20px;
+  }
+
+  .contacto {
+    width: 90%;
   }
 }
 
 @media screen and (max-width: 768px) {
+  /* .navbar ul {
+    width: 100%;
+    height: calc(100vh- 80px);
+    position: absolute;
+    top: 100px;
+    flex-direction: column;
+  } */
+
   .navbar {
-    width: 145%;
+    justify-content: flex-end;
+  }
+
+  .hero__texto {
+    width: 100%;
+    padding: 100px 350px;
   }
 
   .about {
-    width: 143%;
+    width: 100%;
   }
 
   .info-contacto {
-    padding: 40px;
+    width: 90%;
+  }
+
+  .info-column {
+    display: flex;
+    flex-direction: column;
+    width: 150%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 140px;
+  }
+
+  .h2__contacto {
+    padding: 50px;
   }
 }
 @media screen and (max-width: 576px) {
+  .navbar ul {
+    background-color: #4286f4;
+    width: 158%;
+    top: 80px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+  }
+
+  .header {
+    width: 158%;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .navbar-list {
+    display: flex;
+  }
 }
-@media screen and (max-width: 411px) {
-}
-@media screen and (max-width: 375px) {
-}
-@media screen and (max-width: 360px) {
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .navbar i {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .navbar-list {
+    display: flex;
+  }
+
+  .header {
+    width: 350px;
+  }
+
+  .hero__texto {
+    display: flex;
+    flex-direction: column;
+    padding: 400px 100px;
+  }
+
+  .hero h1 {
+    width: 220%;
+  }
+
+  .hero__texto p {
+    width: 200%;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .h2__about {
+    width: 170%;
+  }
+
+  .p__about {
+    width: 170%;
+  }
+
+  .hero img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .container {
+    width: 40%;
+  }
+
+  .info-contacto {
+    width: 180%;
+    padding: 700px -100px;
+  }
+
+  .h2__contacto {
+    padding: 200px 200px 0px;
+  }
 }
